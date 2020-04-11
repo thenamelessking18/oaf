@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculator</title>
+    <script>
+    * {
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    width: 2cm;
+    height: 1.5cm;
+    font-size: 0.75cm;
+    margin: 2;
+    cursor: pointer;
+    border: 1px solid white;
+    font-weight: bold;
+    border-width: 0;
+}
+
+.textview {
+    width: 7.8cm;
+    margin: 1mm;
+    padding: 1mm;
+    font-size: 1.1cm;
+}
+
+.operator {
+    width: 2cm;
+    height: 1.5cm;
+    font-size: 0.75cm;
+    font-weight: bold;
+    margin: 2;
+    cursor: pointer;
+    border: 1px solid white;
+    border-width: 0;
+}
+
+.operator:hover {
+    background-color: orange;
+    color: snow;
+}
+
+.button:hover {
+    background-color: rgb(107, 107, 160);
+    color: snow
+}
+
+
+
+.main {
+    position: absolute;
+    top: 15%;
+    right: 50%;
+    background: rgb(128, 128, 128)
+}
+</script>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    width: 2cm;
+    height: 1.5cm;
+    font-size: 0.75cm;
+    margin: 2;
+    cursor: pointer;
+    border: 1px solid white;
+    font-weight: bold;
+    border-width: 0;
+}
+
+.textview {
+    width: 7.8cm;
+    margin: 1mm;
+    padding: 1mm;
+    font-size: 1.1cm;
+}
+
+.operator {
+    width: 2cm;
+    height: 1.5cm;
+    font-size: 0.75cm;
+    font-weight: bold;
+    margin: 2;
+    cursor: pointer;
+    border: 1px solid white;
+    border-width: 0;
+}
+
+.operator:hover {
+    background-color: orange;
+    color: snow;
+}
+
+.button:hover {
+    background-color: rgb(107, 107, 160);
+    color: snow
+}
+
+
+
+.main {
+    position: absolute;
+    top: 15%;
+    right: 50%;
+    background: rgb(128, 128, 128)
+}
+</style>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <input class="textview" id="result" />
+        <table onkeydown="oper(event); keyadd(event)">
+            <tr>
+                <td><input class=" operator" type="button" value="C" onclick="oper(this)">
+                </td>
+                <td><input class="operator" type="button" value="del" onclick="del()">
+                </td>
+                <td><input class="operator" type="button" value="/" onclick="oper(this)"></td>
+                <td><input class="operator" type="button" value="*" onclick="oper(this)"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="7" onclick="adddigit(this)"></td>
+                <td><input class="button" type="button" value="8" onclick="adddigit(this)"></td>
+                <td><input class="button" type="button" value="9" onclick="adddigit(this)"></td>
+                <td><input class="operator" type="button" value="-" onclick="oper(this)"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="4" onclick="adddigit(this)"></td>
+                <td><input class="button" type="button" value="5" onclick="adddigit(this)"></td>
+                <td><input class="button" type="button" value="6" onclick="adddigit(this)"></td>
+                <td><input class="operator" type="button" value="+" onclick="oper(this)"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="1" onclick="adddigit(this)"></td>
+                <td><input class="button" type="button" value="2" onclick="adddigit(this)"></td>
+                <td><input class="button" type="button" value="3" onclick="adddigit(this)"></td>
+                <td rowspan="5"><input class="operator" type="button" value="=" onclick="oper(this)"
+                        style="height: 3.08cm;">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="9"><input class="button" type="button" value="0" onclick="adddigit(this)"
+                        style="width:6.11cm ;"></td>
+
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
